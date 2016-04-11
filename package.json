@@ -1,0 +1,11 @@
+{
+  "name": "tomnod",
+  "version": "1.0.0",
+  "description": "demonstrate use of map api in tandem with tomnod api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maxwell douglas oroark",
+  "license": "ISC"
+}
