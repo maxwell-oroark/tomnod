@@ -17,5 +17,16 @@ angular.module('app')
        $scope.url = 'mapperdev.tomnod.com/chip_api/chip/lat/' + $scope.lat + '/lng/' + $scope.lng
      });
 
+     //attempting to place marker on click so that user understands where current zoom is on the map
+     map.on('click', addMarker);
+
+    function addMarker(e){
+      if (typeof circleMarker !== "undefined" ){
+        map.removeLayer(circleMarker);
+      }
+      //add marker
+      circleMarker = new L.circleMarker(e.latlng, {"radius":15}).addTo(map);;
+    }
+
 
   }])

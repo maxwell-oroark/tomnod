@@ -30,8 +30,22 @@
           <img id = "tomnod-img" ng-src = "http://mapperdev.tomnod.com/chip_api/chip/lat/{{lat}}/lng/{{lng}}">
       </div>
       <div class = "row">
+        <div class = "col-xs-12 text-center mini-output">
+          <code>{{lat}} , {{lng}}</code>
+        </div>
+      </div>
+      <div class = "row">
         <div class = "mobile-zoom col-xs-12">
-          <img id = "tomnod-img" ng-src = "http://mapperdev.tomnod.com/chip_api/chip/lat/{{lat}}/lng/{{lng}}">
+            <div class = "glyph-left pull-left">
+                <span class = "glyphicon glyphicon-globe"></span>
+            </div>
+
+              <img id = "tomnod-img" ng-src = "http://mapperdev.tomnod.com/chip_api/chip/lat/{{lat}}/lng/{{lng}}">
+
+            <div class = "glyph-right pull-right">
+                <span class = "glyphicon glyphicon-search"></span>
+            </div>
+
         </div>
       </div>
     </div>
