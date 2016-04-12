@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app = "app">
+<head>
+  <meta charset ="utf-8">
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <title>Map-a-licous</title>
+
+  <!-- my personal CSS -->
+  <link rel = "stylesheet" href="styles/main.css">
+  <!-- CSS for mapbox, an extension of leaflet -->
+  <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+  <!-- CSS for twitter bootstrap -->
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css' rel="stylesheet">
+  <!-- javascript for mapbox, an extension of leaflet -->
+  <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+  <!-- Angular javascripts -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js'></script>
+</head>
+<body ng-controller = "mainController">
+
+  <div  id='output' class='ui-control'>
+  Click: <code ng-model = 'currentCoordinates' id='click'></code><br/>
+  Mousemove: <code id='mousemove'></code><br/>
+  </div>
+
+  <div ng-click = "fetch()" id='map'></div>
+  <div id = 'greeting'>{{ greeting }}</div>
+  <div id = 'tomnod'>
+    <img ng-src = "http://mapperdev.tomnod.com/chip_api/chip/lat/{{lat}}/lng/{{lng}}">
+  </div>
+
+
+
+
+  <!-- personal javascript files -->
+  <script src ='scripts/app.js'></script>
+
+</body>
+</html>

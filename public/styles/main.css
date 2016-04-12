@@ -1,0 +1,30 @@
+body { margin:0; padding:0; }
+
+
+#map {
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:50%; }
+
+#greeting {
+  float : right;
+}
+.ui-control {
+background:#fff;
+position:absolute;
+top:10px;
+right:10px;
+padding:10px;
+z-index:100;
+border-radius:3px;
+}
+
+
+#tomnod{
+  position: absolute;
+  right : 0;
+  top   : 0;
+  width : 800px;
+  height : 800px;
+}
