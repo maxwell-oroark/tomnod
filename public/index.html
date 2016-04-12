@@ -4,7 +4,6 @@
   <meta charset ="utf-8">
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <title>Map-a-licous</title>
-
   <!-- my personal CSS -->
   <link rel = "stylesheet" href="styles/main.css">
   <!-- CSS for mapbox, an extension of leaflet -->
@@ -16,17 +15,24 @@
   <!-- Angular javascripts -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js'></script>
 </head>
+
 <body ng-controller = "mainController">
+  <div class = "container-flex">
+    <div class = "row">
+      <div ng-click = "fetch()" class = "col-xs12 col-sm-6 col-md-8" id='map'>
+      </div>
+      <div class = "col-xs-12 col-sm-6 col-md-4" id = "zoom-box">
+          <div  id='output' class='ui-control'>
+            Click: <code ng-model = 'currentCoordinates' id='click'></code><br/>
+            Mousemove: <code id='mousemove'></code><br/>
+          </div>
+          <img id = "tomnod-container" src = "images/mag-glass-transparent.png" />
+          <img id = "tomnod-img" ng-src = "http://mapperdev.tomnod.com/chip_api/chip/lat/{{lat}}/lng/{{lng}}">
+      </div>
+    </div>
 
-  <div  id='output' class='ui-control'>
-  Click: <code ng-model = 'currentCoordinates' id='click'></code><br/>
-  Mousemove: <code id='mousemove'></code><br/>
-  </div>
 
-  <div ng-click = "fetch()" id='map'></div>
-  <div id = 'greeting'>{{ greeting }}</div>
-  <div id = 'tomnod'>
-    <img ng-src = "http://mapperdev.tomnod.com/chip_api/chip/lat/{{lat}}/lng/{{lng}}">
+
   </div>
 
 

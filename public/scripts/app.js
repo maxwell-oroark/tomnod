@@ -6,7 +6,7 @@ angular.module('app')
      L.mapbox.accessToken = 'pk.eyJ1IjoibWF4d2VsbG8iLCJhIjoiY2ltc2Fma2UxMDFpb3ZsbTR2MjJvMmlwcCJ9.-czd-gCxko0qiczeOvUbig';
 
      var click = document.getElementById('click'),
-       mousemove = document.getElementById('mousemove');
+         mousemove = document.getElementById('mousemove');
 
      var map = L.mapbox.map('map', 'mapbox.streets');
 
@@ -16,23 +16,6 @@ angular.module('app')
        $scope.lng = e.latlng.lng
        $scope.url = 'mapperdev.tomnod.com/chip_api/chip/lat/' + $scope.lat + '/lng/' + $scope.lng
      });
-
-     map.on('click', function(e){
-       console.log($scope.lat, $scope.lng)
-     })
-
-    //  $scope.fetch = function(){
-    //    console.log('working')
-    //    $http({
-    //      method : 'GET',
-    //      url : $scope.url
-    //    }).then(function(data){
-    //       console.log(data)
-    //    })
-    //  }
-
-    //  $scope.currentCoordinates = document.getElementById('click')
-
 
 
   }])
