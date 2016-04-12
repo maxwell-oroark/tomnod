@@ -21,13 +21,18 @@
     <div class = "row">
       <div ng-click = "fetch()" class = "col-xs12 col-sm-6 col-md-8" id='map'>
       </div>
-      <div class = "col-xs-12 col-sm-6 col-md-4" id = "zoom-box">
+      <div class = "zoom-box col-xs-12 col-sm-6 col-md-4">
           <div  id='output' class='ui-control'>
             Click: <code ng-model = 'currentCoordinates' id='click'></code><br/>
             Mousemove: <code id='mousemove'></code><br/>
           </div>
           <img id = "tomnod-container" src = "images/mag-glass-transparent.png" />
           <img id = "tomnod-img" ng-src = "http://mapperdev.tomnod.com/chip_api/chip/lat/{{lat}}/lng/{{lng}}">
+      </div>
+      <div class = "row">
+        <div class = "mobile-zoom col-xs-12">
+          <img id = "tomnod-img" ng-src = "http://mapperdev.tomnod.com/chip_api/chip/lat/{{lat}}/lng/{{lng}}">
+        </div>
       </div>
     </div>
 
