@@ -27,9 +27,11 @@ angular.module('app')
       //add marker
       circleMarker = new L.circleMarker(e.latlng, {"radius":15}).addTo(map);;
     }
-
-
+    
+    //end of controller
   }])
+
+  //custom directive that uses loading gif as tomnod image is being called.
   .directive("mySrc", function() {
     return {
       link: function(scope, element, attrs) {
